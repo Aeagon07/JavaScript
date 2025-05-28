@@ -4,7 +4,7 @@
 
 let name = "Rushikesh"
 let age = 20
-let isLoggedIn = true 
+let isLoggedIn = true
 
 /*
 number => 2 to power 53
