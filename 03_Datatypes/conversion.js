@@ -1,13 +1,13 @@
 let score = 23
 
-// console.log(typeof score);
-// console.log(typeof(score));
+console.log(typeof score);
+console.log(typeof(score));
 
 // To conver this into the string then
 let valueInString = String(score)
 
-// console.log(typeof(valueInString))
-// console.log(valueInString);
+console.log(typeof(valueInString))
+console.log(valueInString);
 
 // if you write the some string in it you define like this "23abc" although it conver into type Number but if you want to see it; they appeared as the NAN(NOT A NUMBER) so be carefull while using it..
 
@@ -24,7 +24,7 @@ undefined => NAN
 let isLogg = 1
 
 let boolIsLogg = Boolean(isLogg)
-// console.log(boolIsLogg);
+console.log(boolIsLogg);
 
 /**
 (Boolean Conversion)
@@ -39,6 +39,7 @@ let boolIsLogg = Boolean(isLogg)
 let value = 3
 let negValue = -value
 console.log(negValue)
+
 /**
  2+2 => 4
  2-2 => 0

@@ -1,0 +1,85 @@
+This is full summary on your topic datatypes based on the interview perspective...
+
+How you can store your data in your meomery and how you access on that basis there are two types of datatypes
+
+ 1) Primitives => they all are the call by value... (total = 7)
+**Call By Value -> hame unka original reference nahi diya unne copy karke hamre pass aate hai
+
+    a) String
+    b) Number
+    c) Boolean
+    d) Null
+    e) Undefined(value assign nahi hai meomery space allocation hai)
+    f) Symbol
+    g) bigInt
+
+2) Reference (Non-primitives) => they are call by reference
+ 
+    Arrays, Objects, Functions
+
+**
+Javascript is Dyanmically Typed langauge so you don't need to define the type of variable...
+(#Rust or Typescript are Static Typed langauge)
+
+**
+Symbol:
+const id = Symbol('123')
+const custId = Symbol('123')
+
+console.log(id === custId) => false...
+
+even they both having same values but they are not same cause due to Symbol.
+It create variable unique even they having same values..
+
+**
+bigInt:
+let bigNumber = 123432892n => just add n at the last
+
+**
+Non-primitives datatypes :
+
+Arrays => const heros = ["Shaktiman", "Krish", "Naagraj", "Balveer"]
+
+Objects => 
+let myObj = {
+                name: "Rushikesh",
+                age: 20,
+            }
+
+Functions => there are different types of writting a function in Javascript
+variable approach :-
+
+const myFunction = function(){
+    console.log("Hello")
+}
+
+**
+what value give by the typeof operator?
+
+1) Undefined => "undefined"
+2) Null =>      "object"
+3) Boolean =>   "boolean" 
+4) Number =>    "number"
+5) String =>    "string"
+
+a) Object(native and does not impl.([call]) ) => "object"
+a) Object(native or host and impl.([call]) ) => "function"
+a) Object(host and does not impl.([call]) ) => "Implementation-defined except may not be "userdefined", "Boolean", "number" or "string"
+
+jitne bhi non premitive data type hai unka object hi type aata hai but function ka function aata hai usse ham function-object bol te hai
+
+**
+Ex-Ans :-
+
+1) id           =>   Symbol(123)
+2) custId       =>   Symbol(123)
+3) heros        =>   object(Array)
+4) myObj        =>   object(Object)
+5) myFunction   =>   function
+6) score        =>   Number(23)
+7) scoreValue   =>   Number(100.7)
+8) isLogged     =>   Boolean(false)
+9) outsideTemp  =>   Object(null)
+10) userEmail   =>   Undefined
+
+****************************************************************************************************
