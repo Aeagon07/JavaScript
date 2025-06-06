@@ -21,4 +21,15 @@ console.log(newString);
 // substring had a range => [start, end). It ignore the negative value
 
 const anotherString = gameName.slice(-7, 5);
-console.log(anotherString); // you can use the negative values 
+console.log(anotherString); // you can use the negative values rest all the range is same 
+
+const newStr = "   Hitesh     "
+console.log(newStr);
+console.log(newStr.trim()); // It just remove the extra spaces in the string
+
+const url = "https://hitesh.com/hitesh%20choudary"
+console.log(url.replace('%20', '-')); // => https://hitesh.com/hitesh-choudary
+
+console.log(url.includes("hitesh")) // => gives you true
+
+console.log(gameName.split('-'))
