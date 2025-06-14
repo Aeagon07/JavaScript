@@ -57,4 +57,4 @@ console.log(myObj.greeting()) // => Executed the funtion along with undefined
 console.log(myObj.greetingTwo()) 
 
 
-// Wrte summary on the notebook..   
+// Write a summary in the notebook..   
