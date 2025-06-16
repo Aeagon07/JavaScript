@@ -9,9 +9,9 @@ if(true){
 /*
 To ye three if ke scope ke andar define hai to wo scope ke bahar accessable nahi hone chaiye? Right?
 */
-// console.log(a) // => Not Accessible
-// console.log(b) // => Not Accessible
-// console.log(c)
+console.log(a) // => Not Accessible
+console.log(b) // => Not Accessible
+console.log(c)
 // // => You access c outside the scope also..It will prict the value 30.
 
 // agar aap ne var ko globally declare kiya aur ik block scope like if ka 
@@ -32,9 +32,9 @@ console.log(c) => Gives you 40 not the 300 which you define globally..
 let l = 500
 if(true){
     let l = 34;
-    // console.log("Inner: ", l);
+    console.log("Inner: ", l);
 }
-// console.log(l);
+console.log(l);
 // That is block scope => the value of l is blocked as 34 for that scope..
 
 // IQ => Jo ham browser pe global scope hai aur jo node se terminal run kar te hai wo jo globa scope hota hai wo alag hote hai..
@@ -48,7 +48,7 @@ function one(){
         const website = "Youtube"
         console.log(username)
     }
-    // console.log(website);  gives you error cause two scopes is ended so you don't allow to access the website outside the two..
+    console.log(website); //gives you error cause two scopes is ended so you don't allow to access the website outside the two..
 
     two() // Ye execute hoga aur Hitesh print karega 
     // Cause bahar waala function andar executable hai but andar ka bahar execute nahi hoga.. 
