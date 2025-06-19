@@ -31,7 +31,6 @@ for (let i = 0; i < myArr.length; i++) {
     console.log(element);
 }
 
-
 // Break and Continue
 for(let i = 1; i <= 20; i++){
     if(i == 5){
@@ -59,3 +58,5 @@ what happen actually (continue)=>
         .....
 Bas wo Value of 5 print nahi karta aur rest code ko execute karne deta hai code exit nahi karta..
 */
+
+// Doing Some changes please ignore..
