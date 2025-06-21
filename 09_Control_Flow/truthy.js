@@ -7,7 +7,8 @@
 //     console.log("Don't have user email")
 // }
 
-// /* "" empty string hai to wo false consider kar rahe hai aur string ke andar kuch likh hai "Rushi" usse ham true consider kar rahe hai..
+// /* "" empty string hai to wo false consider kar rahe hai aur string ke 
+// andar kuch likh hai "Rushi" usse ham true consider kar rahe hai..
 //  */
 
 // // Falsy Values
@@ -36,7 +37,8 @@
 
 // let val1;
 // val1 = 5 ?? 10; 
-// val1 = null ?? 10; // ye us hota hai agar kisi complex function se value aa rahi hai to wo assign karlo nahi to safty ke liye null ko consider karlo..
+// val1 = null ?? 10; // ye us hota hai agar kisi complex function se value 
+// aa rahi hai to wo assign karlo nahi to safty ke liye null ko consider karlo..
 
 // val1 = undefined ?? 15;
 
@@ -44,4 +46,5 @@
 
 // // console.log(val1);
 
-// // NCO => It is just fall back operator used when you have to use the dat from the application.. 
+// // NCO => It is just fall back operator used when you have to use the 
+// dat from the application.. 

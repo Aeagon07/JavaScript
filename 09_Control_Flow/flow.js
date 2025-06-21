@@ -1,4 +1,5 @@
 // Flow Control In Javascript..
+
 const isLogged = true;
 
 if(2 === '2'){
@@ -11,7 +12,8 @@ if(2 === '2'){
 
 // = => Use to assign value
 // == => Used to check the vlaues are correct or not
-// === (Strict Equal)=> it is used to compare same data type means 2 === '2' is give you false 
+// === (Strict Equal)=> it is used to compare same data type means 2 === 
+// '2' is give you false 
 
 // Scope ke andar ka koi bhi variable bahar accesseable nahi hota.. 
 // That's why in scope we not use the var 
