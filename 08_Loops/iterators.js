@@ -20,7 +20,8 @@ do {
     console.log(`Score is : ${score}`)
     score++;
 } while (score <= 10);
-// The concept in the do-while is whatever the condition weather it is true or false the do loop executed atleast 1 time so
+// The concept in the do-while is whatever the condition weather it is true 
+// or false the do loop executed atleast 1 time so
 
 // Case=>
 let marks = 10;
@@ -35,6 +36,7 @@ do {
     marks++;
 } while (marks <= 10);
 // In this case you got My Marks is 10 and stop
-// Case first the do loop executed then while loop execute so in do marks value is increased tha't why while loop is not executed..
+// Case first the do loop executed then while loop execute so in do marks 
+// value is increased tha't why while loop is not executed..
 
 // work flow => do -> while(True) -> do

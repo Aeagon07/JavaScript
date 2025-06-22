@@ -21,6 +21,8 @@ for (const lang in programming) {
     console.log(programming[lang]);
 }
 
-// why => Cause in the for-in it will print the keys directly like console log keys but in other loop like for-of it direclty print the value of the keys specially see in the array..
+// why => Cause in the for-in it will print the keys directly like console 
+// log keys but in other loop like for-of it direclty print the value of the 
+// keys specially see in the array..
 
 // Array you can iterate using the both for-in & for-of ***

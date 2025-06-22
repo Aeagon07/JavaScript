@@ -15,7 +15,8 @@ for(const greet of greetings){
 
 // Maps
 const map = new Map();
-// Map holds the key-value pairs anr remembers the original inseration order of keys means insertion ke andar order important hai..
+// Map holds the key-value pairs anr remembers the original inseration 
+// order of keys means insertion ke andar order important hai..
 
 // In Map, values are unique duplicy is not allowed..
 map.set('IN', "India")

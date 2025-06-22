@@ -11,7 +11,10 @@ const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 let ansNum = nums.filter((num) => num > 4) // It return the values 
 console.log(ansNum);
-// Jab bhi ham filter use karate hai tab wo call back fucntion leta hai jo each vaules ko access karega uske baad hame condition deni hoti hai agar wo condition satisfised hogi tabi wo kuch return karega..
+// Jab bhi ham filter use karate hai tab wo call back fucntion leta hai jo 
+// each vaules ko access karega uske baad hame condition deni hoti hai agar 
+// wo condition satisfised hogi tabi wo kuch return karega..
+
 
 // jab bhi filter ke andar scope start ho tab you must write the return
 // let ansNum = nums.filter((num) => {
