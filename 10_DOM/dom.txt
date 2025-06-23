@@ -1,0 +1,51 @@
+1) getElementById('<id_name>')
+=> doucument.getElementById('titile)
+** = hame hamesha class hi likha te but jab doucument usko portrait karta 
+hai tab usse className consider karete hai ex. doucument.getElementById
+('titile).className => 'heading'
+
+
+Iss liye react ke andar ham className likh te hai instead of class cause dom ke andar bhi className hi use hota hai
+
+2) getAtrribute('<class/id _names>') => gives you value of that attriute    
+3) setAttribute('class/id', '<class/id _names> the original class name') they set the attriute to html class or id's but we have to use both the newier and older one so the integrity of code with prvious name remain same 
+
+Style
+doucument.style.backgroundColor = 'green'
+doucument.style.padding = "15px"
+doucument.style.borderRadius = "15px"
+
+get content from id's 
+titile.textContent => gives you constent inside the title id
+titile.innerText => gives you constent inside the title id
+titile.innerHTML => gives you constent inside the title id
+
+difference between them :- 
+doucument.getElementById('titile').textContent => It show you all the text or content inside title even if some content is hide but it shows there..
+whereas,
+doucument.getElementById('titile').innerText => It only show which content is diplay on browser it cannot show you the hide content inside the title
+
+doucument.getElementById('titile').innerHTML => if you written the html tags inside the html tag in title then it clearly shown by this systax
+ex., 'DOM Manupulation <span> Test text <span>'
+they support the inside html tags that other 2 don't
+
+4) doucument.getElementByClassName('<class_name>')
+
+5) Query Selector :-
+ -> by Tags 
+  doucument.querySelector('h1') => if multiple h1 present then it gives you only first <h1></h1>
+ -> by id
+  doucument,querySelector('#title');
+ -> by class
+  doucument.querySelector('.heading');
+
+To kuch bhi aap ko select karna hai wo iss ke andar daal to like css property use karte ho waise aap use select kar sakte ho..
+
+
+Jo query selector se hame list chaiye so you see you get the nodeList..
+Here,
+NodeList is type of an array but not exactly an array cause if yu see the 
+properties of that so there is no map yeah you can use the foreach but 
+there is no map so,
+
+you want perform some action on the NodeList please check it's prototype first 

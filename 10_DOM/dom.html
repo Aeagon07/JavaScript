@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="bg-black">
-        <h1 class="Heading">DOM Learning on Chai aur Code</h1>
+        <h1 id="title" class="Heading">DOM Learning on Chai aur Code</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, amet.</p>
     </div>
     <!-- When you get the collection then it is not array first, so they have not able to use array properties like hash, map, each -->
@@ -18,5 +18,18 @@
         document.getElementById('firstHeading').innerHTML = "<h1> Chai aur Code </h1>"-->
 
         <!-- Basically with DOM we can easily access the element and also you can easy change or manupulate them.. -->
+
+        <script>
+            // How Queryselector perform
+            const myH1 = document.querySelectorAll('h1');
+            myH1.style.color = 'green' // Gives you type error cause you have to define first the on which h1 you implement the changes
+
+            myH1[0].style.color = 'green';
+
+            // There is no looping available on the HTML Collection
+            // So just like Nodelist you have to convert them into array
+            Array.from(/*HTML_Collection*/) 
+            // Noe you can access everything like map, foreach
+        </script>
 </body>
 </html>
