@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #FFF;">
+    <ul class="language">
+        <li>Javascript</li>
+        <li>Python</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const list = document.createElement('li')
+        // createElement use kiya ki konsa tag ka element chahiye if you write the h1 then it become <h1> LangName </h1>
+        list.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(list)
+    }
+    addLang("Java")
+    addLang("TypeScript")
+
+    // Ye jo hame ne kiya hai iska ik problem hai 
+    /* yaha hamre list ke andar ik hi item hai par kya ho agar 100 items ho 
+    to usse uss ke andar traverse karna padhega 100 items tak aur last mein 
+    jake 101 position pe language ko add karan padhega cause ham append kar 
+    rahe hai.. */
+    
+    // SO as you read their is optimization issue so what actually we did is,
+    // Using DSA;
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+    // Iss ke andar hame pura ka pura tree traverse nahi karana 
+    // For big project must follow the append version instead of the 
+    // innerHTML
+    
+    // Edit
+    const secondnLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "MOJO" but not optimised
+    // ham ne new element banaya usske andar value insert kari aur replace kar di python ki jagah
+    const newlang = document.createElement('li');
+    newlang.textContent = "Mojo";
+    secondLang.replaceWith(newlang);
+    
+    // Yaha hamare pass refernce tha as newlang jo ki python ko point kar raha tha iss liye ham ne queryselector ka use nahi kiya 
+    
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>';
+    
+    // Remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+</script>
+</html>
