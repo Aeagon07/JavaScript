@@ -37,4 +37,27 @@ buttons.forEach(function(button){
 })
 ```
 
-## Project 2 - 
+## Project 2 - BMI Calculator
+```javascript
+const form = document.querySelector('form')
+//  No - Because you don't want value store is empty when page loads, that's why after click it store them
+// const height = parseInt(document.querySelector('#height').v
+
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+
+  const height = parseInt(document.querySelector('#height').value)
+  const weight = parseInt(document.querySelector('#weight').value)
+  const res = document.querySelector('#results')
+
+  // some checks
+  if(height === '' || height < 0 || isNaN(height)){
+    res.innerHTML = "Please give a valid height"
+  }else if(weight === '' || weight < 0 || isNaN(weight)){
+    res.innerHTML = "Please give a valid weight"
+  }else {
+    const formula = (weight / ((height*height)/10000)).toFixed(2)
+    res.innerHTML = `<span>${formula}</span>`
+  }
+})
+```
