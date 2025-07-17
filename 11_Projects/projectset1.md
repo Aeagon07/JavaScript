@@ -61,3 +61,20 @@ form.addEventListener('submit', function(e){
   }
 })
 ```
+
+## Project 3 - 
+```javascript
+const clock = document.getElementById('clock')
+
+// let date = new Date()
+// console.log(date.toLocaleString())
+
+// But hame baar baar refresh na karna padhe page ko ye continuosly mere ko time deta rahe.. 
+
+// There is small method that control all javascripts events
+// It useful when you gave a method and wnat to repeate after some interval of time 
+setInterval(function(){
+  let date = new Date();
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000)
+```
