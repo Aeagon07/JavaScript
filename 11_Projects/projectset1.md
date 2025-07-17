@@ -62,7 +62,7 @@ form.addEventListener('submit', function(e){
 })
 ```
 
-## Project 3 - 
+## Project 3 - Digital Clock
 ```javascript
 const clock = document.getElementById('clock')
 
@@ -77,4 +77,103 @@ setInterval(function(){
   let date = new Date();
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000)
+```
+
+## Project 4 - Guess a Number
+```javascript
+let number = parseInt(Math.random() * 100 + 1);
+// console.log(number)
+
+const user = document.querySelector('#guessField')
+const submit = document.querySelector('#subt') 
+
+const guessNumber = document.querySelector('.guesses')
+const guessRem = document.querySelector('.lastResult')
+
+const direction = document.querySelector('.lowOrHi')
+
+const startOver = document.querySelector('.resultParas')
+
+const p = document.createElement('p');
+
+// How we gone do that, user see the previous prediction with showing him a array
+let prevGuess = [];
+let numGuess = 1;
+
+let playGame = true;
+
+if(playGame){
+  submit.addEventListener('click', function(e){
+    e.preventDefault()
+    const guess = parseInt(user.value)
+    validGuess(guess)
+  })
+}
+
+function validGuess(guess){
+  // It just check the value is bet 1 to 100 or not
+  if(isNaN(guess) || guess < 1 || guess > 100){
+    alert(`Please Enter Valid Number! Your ${guess} is not Valid`)
+  }else {
+    prevGuess.push(guess);
+    if(numGuess > 10){
+      displayGuess(guess)
+      displayMessage(`Game Over!! Random Number was ${number}`)
+      endGame()
+    }else{
+      displayGuess(guess)
+      checkGuess(guess)
+    }
+  }
+}
+
+function checkGuess(guess){
+  // checks weather the value is high, low or equal
+  if(guess === number){
+    displayMessage(`You Guessed it right!`)
+    endGame()
+  }else if(guess < number){
+    displayMessage(`Number is TOO Low`)
+  }else if(guess > number){
+    displayMessage(`Number is TOO High`)
+  }
+}
+
+function displayMessage(message){
+  // Gives you message
+  direction.innerHTML = `<h3>${message}</h3>`  
+
+}
+
+function displayGuess(guess){
+  // values cleaning, guess array and reminaning updation
+  // Cleaning
+  user.value = ''
+  guessNumber.innerHTML += `${guess}, `
+  numGuess++;
+  guessRem.innerHTML = `${11 - numGuess}`
+}
+
+function endGame(){
+  user.value = ''
+  user.setAttribute('disabled', '')
+  p.classList.add('button')
+  p.innerHTML = `<h2 id= "newGame"> Start new Game</h2>`
+  startOver.appendChild(p)
+  playGame = false
+  newGame()
+}
+function newGame(){
+  const newGameButton = document.querySelector('#newGame')
+  newGameButton.addEventListener('click', function(e){
+    number = parseInt(Math.random() * 100 + 1);
+    prevGuess = []
+    numGuess = 1;
+    guessNumber.innerHTML = ''
+    guessRem.innerHTML = `${11 - numGuess}`
+    user.removeAttribute('disabled')
+    startOver.removeChild(p)
+    playGame = true;
+  })
+}
 ```
