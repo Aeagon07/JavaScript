@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // you should never write the code of event handling in html
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl is Clicked!')
+    // This is also very outdated approach
+    // }
+
+    // Jo third parameter hota hai wo false hota hai usska ham use karte bhi nahi 
+
+    // attachEvent() -> Early time when there is enternet explorar run web's
+
+    // jQuery -> on 
+    // document.getElementById('owl').addEventListener('click', function(e){
+        // alert('Owl is CLicked')
+        // e -> It is event Object
+        // console.log(e.timeStamp) // => Mostly apne ko browser ke event or envirnoment ke event..
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keyCode
+    // })
+
+    // Event Propogation has two meanings 1) Event Bubling(false case/ default case [in use]) 2) Event Capturing
+
+    // Event Bubling => means bubble is the thing that execute the inner first then go to outside just like that,
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Image is clicked!")
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl is clicked!!")
+    // }, false)
+
+    // SO first owl is clicked hoga then Image is clicked aayega
+
+    // But, In Event Capturing Mode
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Image is clicked!")
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("Owl is clicked!!")
+        e.stopPropagation()
+    }, true)
+
+    // so first Image is clicked then owl is clicked...
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault()
+        e.stopPropagation()
+        console.log("Google Clicked");
+    }, false)
+    
+
+</script>
