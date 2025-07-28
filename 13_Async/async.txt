@@ -1,1 +1,18 @@
 there is a catch..
+
+Javascript is single thread langaugue means every code you see is execute by the single code
+
+JS -> shows the synchronous structure of the code..
+each operation is waot until the first operation is execute 
+
+Blocking Code vs Non-Blocking Code =>
+
+BC => Block the flow of the program e.g., Read file synchronously
+NBC => Does not block execution e.g., Read File Async
+
+There is no such like non-blocking code is best or blocking code is the best
+every type of the code has it's own use cases
+
+BC use case -> if you want to register in the form but before completion of 
+the form you get the successful message of completion of the student 
+registeration let say so, it is not good  
