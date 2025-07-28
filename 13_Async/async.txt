@@ -16,3 +16,11 @@ every type of the code has it's own use cases
 BC use case -> if you want to register in the form but before completion of 
 the form you get the successful message of completion of the student 
 registeration let say so, it is not good  
+
+EX.,
+If the you have to print the 1 2 3 but there is catch you have to use the 
+set timeout function with time of 0 means there is 1, setTimeOut(2, 0) and 
+3 then what is the output order? is 2 output come before 3 or after 3...
+Sol => first 1 -> 3 -> 2 cause you have to call first for 2 then it go to 
+the call stack then it will print the 2 so instead of that time you get the 
+3...
