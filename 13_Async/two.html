@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const updateTitle = function(){
+        document.querySelector('h1').innerHTML = "Best JS Course"   
+    }
+    const change = setTimeout(updateTitle, 3000)
+
+    // To hame iss timout ko prevent bhi karna hai to -> clearTimeOut()
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(change)
+        console.log("Stoped!")
+    })
+    // Iss ka use agar hamne 3 sec se pehale hi stop button ko clickkar diya to ye title change nahi hoga...
+    
+</script>
+</html>
