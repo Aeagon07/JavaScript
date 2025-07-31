@@ -1,0 +1,1 @@
+// Make a Card of containing the button of follow, photo, Name and folower Number
