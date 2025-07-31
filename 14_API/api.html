@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+<script>
+    const requestURL = 'https://api.github.com/'
+    const hxr = new XMLHttpRequest();
+
+    hxr.open('GET', requestURL)
+    // You can track the state of the request
+    hxr.onreadystatechange = function(){
+        console.log(hxr.readyState);
+        if(hxr.readyState === 4){
+            const data = JSON.parse(this.responseText)
+            // Why you convert into JSON Cause the data comming from the 
+            // responseText is in form of string so..
+            console.log(typeof data);
+            console.log(data.followers_url);
+        }
+    }
+    hxr.send()
+</script>
+</html>
+
+<!-- Assignment => Make a card when you click on the button then it gives you the photo and the followers -->
