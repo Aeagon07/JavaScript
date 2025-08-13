@@ -1,0 +1,12 @@
+call stack maintained by every function when you enter into the meomery or execution contest
+
+In execution contest the bottom most is the Global EC and then all the fucntion goes top of GEC 
+
+cenario is when you have function and withing that we call another function called as callme() then in EC whose this keyword refer?
+
+where this indicate cause the outer layer of the callme is function but this not refer to funtion..
+So in such situation this ref to the Global EC..
+
+IN GEC there is problem -> when you have window object then it ref to window object {window(this window)} but the problem when you have node enviroment then this -> {} empty object
+
+this is still problem but with react it dimonilised but still it is problem in js
