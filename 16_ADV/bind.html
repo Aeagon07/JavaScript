@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <Button>Button Clicked!</Button>
+    
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            // requirement
+
+            // jaise hi page load ho jaye to object ho jaye react ka aur ye 
+            // jo button hai uska refernce mil jaye aur ik method ho 
+            // handleClick return some message when you click on the 
+            // button...
+
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))
+                // yaha ham koi override nahi kar rahe bas hame apne jo bhi handle click kar raha hai uss ke saare access hai so in output you see jitne bhi function the unn sabh ka access hame mil raha hai..
+                
+                // jo issue aa rah tha hame in access the references wo clear ho jayega 
+
+                // This technique is used in the older repos like in legacy support or older code base then you see the bind key oftenly..
+        }
+
+        handleClick(){
+            console.log(`Button clicked`)
+            console.log(this.server); // yaha problem aa rahi hai but this ke pass button ka ref. to hai cause this ko button ne call kiya tha.. then why this happening?
+            // In reqact these problem are repeating most of time in past then we resolve this problem using bind
+        }
+    }
+    const app = new React();
+</script>
+</html>
