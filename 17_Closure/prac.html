@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Practical Usecase</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange`;
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = `green`;
+    // }
+    // efficiant way to do..
+    function onClickHandler(color){
+        document.body.style.backgroundColor = `${color}`;
+    }
+    // document.getElementById('orange').onclick = onClickHandler(orange); 
+
+    // this above writing gives you an erro like it already execute the 
+    // fucntion without clicking on the button so,
+    // here we use the closure and lexical scope concept,
+
+    function onClick(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+    document.getElementById('orange').onclick = onClick("orange");
+    // here we return inner function but the lexial scope of the outer 
+    // fucntion simultaneously goes to the execustion contest so we can 
+    // access the color variable here..
+    document.getElementById('green').onclick = onClick("green");
+</script>
+</html>
